@@ -1,0 +1,10 @@
+server:
+  port: 9001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:1111/eureka/
+turbine:
+#指定要监控的应用
+  app-config: provider,ribbon-consumer
+  cluster-name-expression: new String("default")
